@@ -1,0 +1,57 @@
+in the mainfirst.first we have learn about 
+ 1 --- what is a ArrayList 
+       1 ---- in this how to add the element
+       2 ---- remove element 
+       3 ---- set the element 
+       4 ---- how to calculate size of the ArrayList
+       5 ---- how to use loop in ArrayList 
+
+       Internal working of the Array list ----
+       When we add a element to an Arraylist the following steps occur --
+
+       1 check capacity: before adding the new element, Arraylist checks if there is enough space in the Internal
+         array (elementData). if the array is full, it needs to be resized. 
+    
+       2 Resize if necessary: if the internal array us full the arraylist will create a new array with a larger 
+         capacity (usually 1.5 times the current capacity) and copy th elements form the old array to the new array 
+
+       3 Add the element: the new element is then added to the internal array at the appropriate index, and the size
+        is incremented.
+
+
+        Resizing the Array
+        1 initial capacity : 10 means internal array can hold 10 elements before it needs to grow
+        2 growth factor : the new array is created with a size of 1.5 times the odd array. this growth factor balances
+          memory efficiency and resizing cost
+        3 copying elements: when resizing all element from the odd array are copied to the new array,which is an O(n)
+          where n is the number of elements in the Arraylist 
+
+
+        Removing the Element 
+        1 check Bounds: arraylist first checks if the index is within the valid range.
+        2 Remove the Element: the element is removed and all elements to the right of the removed element are shifted
+          one position to the left to fill the gap 
+        3 Reduce size: the size is decremented by 1 
+
+        // Arraylist dont shrink its size automatically but we can do it 
+        how to put capacity of the internal array so it dont have to increase the capacith
+
+        Arraylist<GENERIC> Arraylist_name = new ArrayList<>(any number for the intial capacity for ex 20) ya isme dusri list de sakete hai 
+        matlab 20 element ke baad iska size increase hoga or nayi array banegi 
+
+    time 28:36 ke age ka dekhna hai remove wala section 29 bhi 
+        
+        TIME COMPLEXITY 
+        1 Access by index using get is O(1)
+        2 Adding an element is O(n) in the worst case when resizing occurs
+        3 Removing elements can by O(n) bc it may involve shifting elements
+        4 iteration is O(n)
+
+
+        WHAT IS Comparator ? ----
+        comparator is an interface, with the help of which we can do custome ordering 
+
+        list.sort(null); ider null is the comparator so when we dont specify the comparator by defaut it get order
+        in the accending order
+
+        when we want to do it in decending order         
