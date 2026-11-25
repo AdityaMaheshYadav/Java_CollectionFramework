@@ -1,0 +1,54 @@
+Vector in java is part of the java.util packages amd is one of the legacy classes (A legacy class in Java is an 
+original class from early Java versions (JDK 1.0) that was designed to store objects before the Java Collections 
+Framework was introduced in Java 1.2.) in Java that implementations the List interface.
+
+
+Vector is synchronized means that it is thread-safe—only one thread can access and modify the Vector at a time.
+
+When a thread calls a synchronized method on a Vector:
+1. Acquires a Lock: The thread acquires an intrinsic lock (monitor) on that specific Vector object.
+2. Blocks Other Threads: If a second thread tries to call any synchronized method on that same Vector, it is 
+forced to pause and wait until the first thread finishes.
+3. Releases the Lock: Once the first thread exits the method, it releases the lock, allowing the next waiting 
+thread to proceed.
+
+
+
+Why This Matters (Pros & Cons)
+
+• Prevents Data Corruption (Pro): If multiple threads add or remove items simultaneously without synchronization, 
+  they can overwrite each other's changes or throw a ConcurrentModificationException. Vector prevents this 
+  automatically.
+• Performance Overhead (Con): Acquiring and releasing locks takes extra processing time. In a single-threaded 
+  application (where no other threads are competing for the data), you pay a performance penalty for thread 
+  safety you don't even need.
+• Compound Operations Are Still Not Safe (Caveat): While individual methods are synchronized, combining two 
+  operations is not. For example, checking if (!vector.isEmpty()) and then calling vector.get(0) is not 
+  atomic—another thread could delete the last element right between those two lines.
+
+
+due to vector synchronization (Overhead)it take more time to process and it takes extra memory
+due to this overhead it is generally recommeneded to use other modern alternatives like ArrayList in single threaded
+scenarios. 
+
+Despite this vector is still useful in certain situations, particularly in multlithreaded environments where thread 
+safety is concern.
+
+KEY FEATURES OF VECTOR 
+
+1 Dyanamic Array: like arraylist, vector is dynamic array that grow automatically when more elements are added then
+  its current capacity
+2 synchronized: all the methods in vector are synchronized which makes it thread safe. this means multiple treads can work on vector without 
+  the risk of computing the data
+3 legacy class
+4 Resizing mechanism: when the current capacity of the vector is exceeded, it doubles its size by default(or increase by a 
+  specific capacity increment if provided)
+5 Random Access: similar to array and arraylist , vector allows random access to element making it efficient for 
+  accessing elements using an index.
+
+
+
+  unlike arraylist we can check the capacity of the vector
+  syntax System.out.println(vector.capacity());
+
+  unlike arraylist the capacity of the internal array increament by 1.5 where as in vector it get double 

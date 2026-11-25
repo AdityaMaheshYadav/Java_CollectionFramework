@@ -38,7 +38,7 @@ package Arraylist;
 
   }
 
- public class Mainfirst {
+ public class ArrayList1 {
     public static void main(String[] args) {
         //how to declare and array
         //int[] arr = new int[10];

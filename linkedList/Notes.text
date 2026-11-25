@@ -31,3 +31,8 @@ There are four main types of linked lists in data structures, categorized by how
 • Structure: Combines the features of doubly and circular linked lists. Each node has next and prev pointers, and the list forms a closed loop.
 • Traversal: Bidirectional and continuous. The tail's next points to the head, and the head's prev points to the tail.
 • Best For: Advanced navigation systems, complex buffers, and data structures like Fibonacci heaps.
+
+
+
+
+In the linkedlist1 and linkedlist2 the linkedlist behave like a list but it also can behave like stack and queue
