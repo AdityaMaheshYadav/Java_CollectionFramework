@@ -1,0 +1,33 @@
+Linked list --
+
+in arraylist the element is stored in continuous memory address / sequential memory address 
+---- In the linked list every element is known as Node which contain two things data and pointer(also know as 
+     reference)
+
+There are four main types of linked lists in data structures, categorized by how their nodes are connected and how you can traverse them.
+
+1. Singly Linked List
+
+• Structure: Each node contains two parts: the data and a pointer (next) to the next node in the sequence.
+• Traversal: Unidirectional (forward only, from the head to the tail).
+• End Marker: The last node points to NULL.
+• Best For: Simple implementations where memory is tight and you only need forward access (e.g., implementing stacks).
+
+2. Doubly Linked List
+
+• Structure: Each node contains three parts: the data, a next pointer, and a previous pointer pointing to the node before it.
+• Traversal: Bidirectional (both forward and backward).
+• End Markers: Both the prev pointer of the head and the next pointer of the tail point to NULL.
+• Best For: Applications requiring easy backward navigation or quick deletions when you already have a reference to the node (e.g., browser back/forward history, undo/redo features).
+
+3. Circular Linked List
+
+• Structure: Similar to a singly linked list, except the last node points back to the first node (head) instead of NULL, forming a continuous loop.
+• Traversal: Unidirectional, but you can start at any node and eventually visit every other node without hitting a dead end.
+• Best For: Round-robin scheduling in operating systems, multiplayer turn-based games, or continuous media playlists.
+
+4. Circular Doubly Linked List
+
+• Structure: Combines the features of doubly and circular linked lists. Each node has next and prev pointers, and the list forms a closed loop.
+• Traversal: Bidirectional and continuous. The tail's next points to the head, and the head's prev points to the tail.
+• Best For: Advanced navigation systems, complex buffers, and data structures like Fibonacci heaps.
