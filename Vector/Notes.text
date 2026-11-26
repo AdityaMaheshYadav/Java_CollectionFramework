@@ -52,3 +52,40 @@ KEY FEATURES OF VECTOR
   syntax System.out.println(vector.capacity());
 
   unlike arraylist the capacity of the internal array increament by 1.5 where as in vector it get double 
+
+
+   Construtors of Vector
+    Vector<Integer> vector = new vector<>() <- is constructor ki baat kr rhe hai 
+
+    1 Vector(): -- creates a vector with an initial capacity of 10
+
+    2 Vector(int initialCapacity): Creates a vector with a specified initial capacity
+
+    3 Vector(Int initialCapacity, int capacityIncrement)
+
+    4 Vector(Collection<? extents E>c): creates a vector containing the element the specified collection 
+    AS you can see in vector1
+
+
+    Methods in vector
+    1 add(E e): Adds an element at the end
+    2 add(int index, E element): inserts an element at the specified indez
+    3 get(int index): Retrieves the element at the specified index
+    4 set(int index, E element): Replace the element at the specified index
+    5 remove(Object o): removes the first occurence of the specified index 
+    6 remove(int index): removes the element at the specified index
+    7 size(): returns the number of element in the vector
+    8 isEmpty(): checks if the vector is isEmpty
+    9 contains(Object o ): checks if the vector conains the specified element
+    10 clear(): Removes all elements from the vector
+
+
+
+    for(int i = 0 ; i < vector.size(); i++) {
+        System.out.println(vector.get(i)); 
+    }
+
+
+    Internal Implementation of Vector
+    same as discuss above , the resizing operation is costly one, as it requires copying the old elements to the
+    new , larger array
