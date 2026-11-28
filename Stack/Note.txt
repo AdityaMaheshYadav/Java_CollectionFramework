@@ -1,0 +1,27 @@
+the stack works on Last in First out (LIFO)
+LIFO Structure : stack follows the Last in first out principle, where the last element added is the 
+first one to be removed
+
+
+ArrayList -----> sequential hoti hai TC O(1)
+Linked list -----> we use it when we want efficient insertion and deletion 
+Vector  -----> sequential hoti hai or use when we want synchronization TC O(1)
+Stack -----> we use stack when we want LIFO behavior 
+
+Since Stack extends Vector , it is synchronized making it thread safe 
+Inheritance : stack is a subclass of vector, which means it inherits all the features of a Dyanamic
+array but is constrained by the stack's LIFO  nature
+
+In stack there are three features 
+1) push : used to add element in the stack
+2) pop : used to delete the last element frome the stack 
+3) peek : used to seek the top element in the stack 
+4) isEmpty : checks if the stack is empty or not 
+5) size : tell the size of the stack 
+// we can also use vector method 
+6) add(index,element): add a particular element in the index
+7) remove(index): remove the element present in the index 
+8) search(index): give us index at that particular index form the top and unlike stack whose 
+   indexing is start form 0 the search indexing is start from 1
+
+   
