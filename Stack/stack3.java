@@ -19,7 +19,8 @@ public class stack3 {
         Integer size = arrayList.get(arrayList.size() -1); //peek 
         System.out.println("the size of the arraylist" + " " + size);
 
-
+        // we should not use arraylist as stack because there is no build in method as it is prese
+        // nt in the linkedlist and stack class
     }
     
 }
